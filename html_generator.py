@@ -1,15 +1,19 @@
 import codecs
+import os
+
+#スクリプトのパスを取得
+base = os.path.dirname(os.path.abspath(__file__))
 
 #本文のパス
-content_path = 'C:/Users/Ryo/Documents/プログラミング学習関連/Python3/HTMLgenerator/content/profile.html'
+content_path = os.path.normpath(os.path.join(base, 'content/profile.html'))
 
 #テンプレート(ヘッダー、サイド、フッター)のパス
-head_path = 'C:/Users/Ryo/Documents/プログラミング学習関連/Python3/HTMLgenerator/template/head.html'
-side_path = 'C:/Users/Ryo/Documents/プログラミング学習関連/Python3/HTMLgenerator/template/side.html'
-foot_path = 'C:/Users/Ryo/Documents/プログラミング学習関連/Python3/HTMLgenerator/template/foot.html'
+head_path = os.path.normpath(os.path.join(base, 'template/head.html'))
+side_path = os.path.normpath(os.path.join(base, 'template/side.html'))
+foot_path = os.path.normpath(os.path.join(base, 'template/foot.html'))
 
 #出力先のパス
-output_path = 'C:/Users/Ryo/Documents/プログラミング学習関連/Python3/HTMLgenerator/output/content.html'
+output_path = os.path.normpath(os.path.join(base, 'output/content.html'))
 
 
 #各種ファイルを開く
